@@ -2,6 +2,25 @@
 .i16
 .a8
 
+	.export success:far
+	.export fail:far
+	.export save_results:far
+	.export init_test:far
+	.exportzp test_num
+	.exportzp result_a
+	.exportzp result_x
+	.exportzp result_y
+	.exportzp result_p
+	.exportzp result_s
+	.exportzp result_d
+	.exportzp result_dbr
+	.exportzp retaddr
+
+
+
+	.import tests_table
+	.import start_tests
+
 .segment "HEADER"
 	.byte "65C816 TEST          "
 .segment "ROMINFO" ; $FFD5
@@ -429,12 +448,6 @@ wait_for_vblank:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-.ifdef basic
-	.include "tests-basic.inc"
-.else
-	.include "tests-full.inc"
-.endif
-
 
 .segment "RODATA"
 txt_running: .byte "Running tests...", 0
@@ -453,9 +466,6 @@ zero:
 font:
 	.incbin "font.bin"
 
-tests_table:
-	.include "tests_table.inc"
-	.faraddr success
 
 .segment "TEST_DATA"  ; At address FFA0. Used by some tests
 test_addr:    ; $FFA0
