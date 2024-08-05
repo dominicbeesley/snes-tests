@@ -1,0 +1,3 @@
+LOAD 300 C:\Users\Dominic\Documents\GitHub\snes-tests\cputest\build\cputest-vhdl816-basic\cputest-vhdl816-basic.bin-ram.bin
+LOAD 10000 C:\Users\Dominic\Documents\GitHub\snes-tests\cputest\build\cputest-vhdl816-basic\cputest-vhdl816-basic.bin-bank1.bin
+LOAD 20000 C:\Users\Dominic\Documents\GitHub\snes-tests\cputest\build\cputest-vhdl816-basic\cputest-vhdl816-basic.bin-bank2.bin

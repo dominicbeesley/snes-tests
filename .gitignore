@@ -3,3 +3,5 @@
 *.sfc
 *.swp
 
+snes-tests.sublime-project
+snes-tests.sublime-workspace
